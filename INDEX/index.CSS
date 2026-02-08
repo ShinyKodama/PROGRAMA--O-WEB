@@ -1,109 +1,177 @@
-/* ====================================== HEADER DA PAGINA ======================================= */
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
+
+/* ================= HEADER ================= */
 
 .header {
-    display:flex;
+    display: flex;
     align-items: center;
-    gap: 1px;
-    padding: 20px;
-    background-color: rgb(133, 87, 61);
-}  
-
-.imagem-logo-container {
-    position: relative;
-    padding-left: 15px;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgb(133, 87, 61);
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
+
+/* LOGO */
 
 .imagem-logo {
-    width: 230px; 
+    width: 100px;
     border-radius: 50%;
-    display: block;
-    box-shadow: 0 0 15px rgba(0,0,0,0.4);
-    transition: 0.3s ease;
-}
-
-.titulo-container {
-    position: inherit;
-    display: flex;
-    overflow: hidden;
-    text-align: center;
-    justify-content: center;
-    background-color: rgb(255, 196, 157);
-    width: 90%;
-    margin-left: -10%;
-    padding: 50px 20px;
-    border-radius: 20px; 
-    flex-wrap: wrap;
-}
-
-.titulo {
-    color: #222;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 2.4em;
-    letter-spacing: 1px;
-    padding: 2px 0px 0px 100px;
-    margin: 0;
+    box-shadow: 0 0 15px rgba(0,0,0,.4);
+    transition: 0.5s ease;
 }
 
 .imagem-logo:hover {
-    transform: scale(1.05);
-}
-/* ==================================== BODY DA PAGINA ==================================== */
-.body {
-    margin: 0;
-    display:flex;
-    padding: 20px;
-    background:
-        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-        url("../IMAGES/imagem-xicara-cafe.jpg");
-        
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    transform: scale(1.2);
 }
 
-.menu-container {
-    background-color:  rgb(207, 142, 105);
-    height: auto;
+/* NAVBAR */
+
+.barra-navegacao ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.barra-navegacao a {
+    text-decoration: none;
+    color: #ffe1ce;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+
+.barra-navegacao a:hover {
+    color: white;
+}
+
+/* TITULO */
+
+.titulo-container {
+    background: rgb(255, 196, 157);
+    padding: 20px 30px;
     border-radius: 20px;
-    transition: 0.4s ease;
 }
 
-.titulo-menu {
-    background-color: rgb(255, 225, 206);
-    font-size: 2.5em;
+.titulo {
+    font-size: 18px;
+}
+
+/* ================= BODY ================= */
+
+.body {
+    min-height: 100vh;
+    padding: 40px;
+    background-color: wheat;
+    background-size: cover;
+}
+.hero {
+    color:#222;
+    width: 750px;
+}
+
+.texto-hero {
+    position: relative;
+    left: 50%;
+}
+
+.imagem-hero {
+    display:block;
+    position: relative;
+    left: -100px;
+    width: 1485px;
+    height: 500px;
+    object-fit: cover;
+    top: -40px;
+}
+
+.sobre {
+    background: #f3dfc3;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+}
+
+.sobre-container {
+    max-width: 700px;
     text-align: center;
-    padding-top:10px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    height: 50px;
-    margin-top: 0px;
-    border-radius: 20px 20px 0px 0px;
-    color:rgb(19, 19, 19);
 }
 
-.menu-items {
-    list-style: disc;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 2.3em;
-    padding: 0px 40px 20px 70px;
-    color: #0c0601;
+.sobre h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
 }
 
-.menu-container:hover {
-    transform: translateY(-10px);
-    box-shadow: 1px 15px 30px 1px #0a0a0a;
+.sobre p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #222;
 }
-/* ===================================== RESPONSIVIDADE DO SITE ============================== */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    padding: 10%;
+
+.assinatura {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 40px 0;
+    background-color:rgb(133, 87, 61);
+    overflow: hidden;
+    width: 100%;
+}
+
+.image-footer-container {
+    display:flex;
+    width: max-content;
+    animation: scroll 10s linear infinite;
+    will-change: transform;
+}
+
+.image-footer {
+    min-width: 200px;
+    height: 100px;
+    margin-right: 20px;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.image-footer img{
+    width: 230px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(-15%);
   }
-  
-  .titulo-container {
-    visibility: hidden;
+  to {
+    transform: translateX(0);
   }
-  
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .titulo-container {
+        display: none;
+    }
+
+    .barra-navegacao ul {
+        flex-direction: column;
+    }
+
 }

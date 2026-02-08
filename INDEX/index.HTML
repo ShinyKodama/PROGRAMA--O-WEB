@@ -3,38 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" type="text/css" href="index.CSS">
-    <title> Cafeteria Bazzan </title>
+    <link rel="stylesheet" href="index.CSS">
+    <title>Cafeteria Bazzan</title>
 </head>
+
 <body>
 
-    <div class="header">
-        
-        <div class="imagem-logo-container">
-            <img src = "../IMAGES/LogoCafeteria.png" class = "imagem-logo"">
-        </div>
-        
-        <div class="titulo-container">
-            <p class = "titulo">
-                <b>Cafeteria Bazzan</b> 
-                <span class = "seta"> ➤ </span> 
-                Onde cada café conta uma história
-            </p> 
-        </div>
+
+
+<div class="header">
+
+    <!-- LOGO -->
+    <div class="imagem-logo-container">
+        <a href ="index.HTML"><img src = "../IMAGES/LogoCafeteria.png" class="imagem-logo"></a>
     </div>
 
-    <div class="body">
-        <div class="menu-container">
-            <p class="titulo-menu"> CARDAPIO </p>
-            <ul class="menu-items">
-                <li> Esfirra de Frango..............R$10,00</li>
-                <li> Esfirra de Farne..............R$20,00</li>
-                <li> Paul Gilbert..............R$25,00</li>
-                <li> Café de café..............R$15,00</li>
-                <li> Café de cocô..............R$10,00</li>
+    <!-- NAVBAR -->
+    <div class="barra-navegacao">
+        <nav>
+            <ul>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Contato</a></li>
             </ul>
-        </div>
-        
+        </nav>
     </div>
+</div>
+
+<div class="body">
+    
+    <section class="hero">
+        <img src = "../IMAGES/cafe.jpg" class = "imagem-hero">
+    </section>
+   
+    <section class="sobre">
+        <div class="sobre-container">
+
+            <h2>Sobre nós</h2>
+
+            <p>
+            O café sempre fez parte da nossa história.
+            Mas para nós, ele vai além do sabor e do aroma.
+            </p>
+
+            <p>
+            Acreditamos que cada xícara carrega momentos, encontros e memórias.
+            Sentíamos que algo ainda podia ser mais profundo — um espaço onde o
+            tempo desacelera, onde o cuidado está em cada detalhe.
+            </p>
+
+            <p>
+            Assim nasceu a Cafeteria Bazzan. Inspirados pelo artesanal, pelo
+            aconchego e pela simplicidade, unimos grãos selecionados, receitas feitas
+            à mão e um ambiente pensado para acolher.
+            </p>
+
+            <p class="assinatura">
+            Cafeteria Bazzan.<br>
+            Onde cada café conta uma história.
+            </p>
+
+        </div>
+    </section>
+</div>
+
+<div class="footer">
+    <div class = "image-footer-container">
+        <div class = "image-footer"><img src = "../IMAGES/decoracao-para-cafeteria-2.png"></div>
+        <div class = "image-footer"><img src = "../IMAGES/MKT-Miniaturas-imagem-blog-CMS-11_uid_680fde594ba11.png"></div>
+        <div class = "image-footer"><img src = "../IMAGES/inspiração-de-cardápio-para-cafeteria-gourmet-1140x641.png"></div>
+        <div class = "image-footer"><img src = "../IMAGES/Amigos-reunidos-na-cafeteria.png"></div>
+       
+    <!-- REPETINDO AS DIVS PRO LOOP IR CERTO (NÃO AFETA A FUNCIONALIDADE DO SITE) -->
+        <div class = "image-footer"><img src = "../IMAGES/decoracao-para-cafeteria-2.png"></div>
+        <div class = "image-footer"><img src = "../IMAGES/MKT-Miniaturas-imagem-blog-CMS-11_uid_680fde594ba11.png"></div>
+        <div class = "image-footer"><img src = "../IMAGES/inspiração-de-cardápio-para-cafeteria-gourmet-1140x641.png"></div>
+        <div class = "image-footer"><img src = "../IMAGES/Amigos-reunidos-na-cafeteria.png"></div>
+    </div>
+</div>
+
+<script src = "index.JS"> </script>
 </body>
 </html>
